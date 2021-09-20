@@ -4,7 +4,7 @@ import UsersHelper from "../helpers/users.helper";
 import ConfigHelper from '../helpers/config.helper';
 import {getRandomItem} from "../helpers/common.helper";
 
-describe.only('transactions',  function() {
+describe.skip('transactions',  function() {
     let transactionsHelper = new TransactionsHelper();
     let usersHelper = new UsersHelper();
     let config = new ConfigHelper();
@@ -74,7 +74,7 @@ describe.only('transactions',  function() {
 
         it('response body contains correct amount', async function () {
             expect(transactionsHelper.response.body.amount).to.eq(amount);
-        });
+       });
 
     });
 
